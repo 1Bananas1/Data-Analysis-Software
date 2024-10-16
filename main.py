@@ -17,14 +17,13 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        self.setWindowTitle("Hello World")
+        self.setWindowTitle("Data Analysis Software")
         layout = QVBoxLayout()
         label = QLabel("My simple app.")
         label.setMargin(10)
         layout.addWidget(label)
 
         button = QPushButton("Push")
-        button.setIcon(QIcon(os.path.join(basedir, "icons", "lightning.png")))
         button.pressed.connect(self.close)
         layout.addWidget(button)
 
